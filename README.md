@@ -3,17 +3,17 @@
 ### easily pluggable to any angular app
 ---
 ## Installation:
------
-Simply install the module
+Simply install the module via bower
 
 		bower install nrt-charts
 
 and add nrt-charts module to your angular app
 
------
+---
 
-Chart Types:
-1. NRT-CHARTS-LINE
+## Chart Types:
+
+1. **NRT-CHARTS-LINE**
 
 		<nrt-charts-line chart-data="data" chart-title="title"></nrt-charts-line>
 
@@ -21,13 +21,13 @@ Chart Types:
 
 	demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-line
 
-2. NRT-CHARTS-PIE
+2. **NRT-CHARTS-PIE**
 
 		<nrt-charts-pie chart-data="data" chart-title="title"></nrt-charts-pie>
 sample data:
 demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
 
-3. NRT-CHARTS-DONUT
+3. **NRT-CHARTS-DONUT**
 
 		<nrt-charts-donut chart-data="data" chart-title="title"></nrt-charts-donut>
 
@@ -35,7 +35,7 @@ demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
 
 	demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
 
-4. NRT-CHARTS-HALF-DONUT
+4. **NRT-CHARTS-HALF-DONUT**
 
 		<nrt-charts-half-donut chart-data="data" chart-title="title"></nrt-charts-semi donut>
 
@@ -43,7 +43,7 @@ demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
 
 	demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
 
-5. NRT-CHARTS-ROUND-GAUGE
+5. **NRT-CHARTS-ROUND-GAUGE**
 
 		<nrt-charts-solid-gauge chart-data="data" chart-title="title"></nrt-round-gauge>
 
@@ -51,7 +51,7 @@ demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
 
 	demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
 
-6. NRT-CHARTS-LINE-FILL
+6. **NRT-CHARTS-LINE-FILL**
 
 		<nrt-charts-line-fill chart-data="data" chart-title="title"></nrt-charts-line-fill>
 

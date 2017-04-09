@@ -1,0 +1,48 @@
+<html ng-app="exampleApp">
+	<head>
+		<meta name="viewport" content="initial-scale=1" />
+		<link href="style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+	</head>
+	<body ng-controller="mainCtrl">
+		<div class="jumbotron">
+			<h1>
+				<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_256.png"></img>
+				<span>NRT-CHARTS</span>
+			</h1>
+			<div class="lead">html5 charts library powered by highcharts</div>
+			<a href="https://github.com/sudeep494/nrt-charts"><input type="button" class="btn btn-success btn-lg" value="learn more"></input></a>
+		</div>
+
+		<!-- <h1>
+			<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_256.png"></img>
+			<span>CHARTS</span>
+		</h1> -->
+<div class="container">
+	<h2>line chart</h2>
+	<section id="nrt-charts-line">
+		<nrt-charts-line data-chart-data="homeValueHistory" chart-title="Home Value History"></nrt-charts-line>
+	</section>
+
+
+	<h2>round gauge chart</h2>
+	<section id="nrt-charts-solid-gauge">
+		<nrt-charts-solid-gauge data-chart-data="schoolRating" chart-title="School Rating"></nrt-charts-solid-gauge>
+	</section>
+</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+		<script src="https://code.highcharts.com/modules/data.js"></script>
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+		<script src="../bower_components/ng-highcharts/dist/ng-highcharts.js"></script>
+		<script src="../src/nrt-charts.js"></script>
+		<link href="../src/nrt-charts.css" rel="stylesheet">
+		<script src="app.js"></script>
+	</body>
+</html>

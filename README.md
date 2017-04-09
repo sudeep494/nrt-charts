@@ -20,7 +20,7 @@ and add nrt-charts module to your angular app
 
 	sample data:
 
-	demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-line
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-line
 
 2. **NRT-CHARTS-PIE**
 
@@ -28,7 +28,7 @@ and add nrt-charts module to your angular app
 
 	sample data:
 
-	demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-solid-gauge
 
 3. **NRT-CHARTS-DONUT**
 
@@ -36,7 +36,7 @@ and add nrt-charts module to your angular app
 
 	sample data:
 
-	demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-solid-gauge
 
 4. **NRT-CHARTS-HALF-DONUT**
 
@@ -44,7 +44,7 @@ and add nrt-charts module to your angular app
 
 	sample data:
 
-	demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-solid-gauge
 
 5. **NRT-CHARTS-ROUND-GAUGE**
 
@@ -52,7 +52,7 @@ and add nrt-charts module to your angular app
 
 	sample data:
 
-	demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-solid-gauge
 
 6. **NRT-CHARTS-LINE-FILL**
 
@@ -60,4 +60,4 @@ and add nrt-charts module to your angular app
 
 	sample data:
 
-	demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-solid-gauge

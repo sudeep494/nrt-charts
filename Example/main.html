@@ -4,7 +4,21 @@
 		<link href="style.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+		<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('a').click(function(){
+				$('html, body').animate({
+						scrollTop: $( $(this).attr('href') ).offset().top
+				}, 500);
+				return false;
+		});
+	})
+	</script>
 	</head>
 	<body ng-controller="mainCtrl">
 		<div class="jumbotron">
@@ -21,14 +35,36 @@
 			<span>CHARTS</span>
 		</h1> -->
 <div class="container">
-	<h2>line chart</h2>
+
+	<div class="row">
+		<div class="col-md-2 text-center">
+			<a href="#nrt-charts-line">line chart</a>
+		</div>
+		<div class="col-md-2 text-center">
+			<a href="#nrt-charts-line">pie chart</a>
+		</div>
+		<div class="col-md-2 text-center">
+			<a href="#nrt-charts-solid-gauge"><a href="#nrt-charts-solid-gauge">donut chart</a>
+		</div>
+		<div class="col-md-2 text-center">
+			<a href="#nrt-charts-solid-gauge">half donut chart</a>
+		</div>
+		<div class="col-md-2 text-center">
+			<a href="#nrt-charts-solid-gauge">round gauge chart</a>
+		</div>
+		<div class="col-md-2 text-center">
+			<a href="#nrt-charts-solid-gauge">line fill chart</a>
+		</div>
+	</div>
+
+
 	<section id="nrt-charts-line">
+		<h2>line chart</h2>
 		<nrt-charts-line data-chart-data="homeValueHistory" chart-title="Home Value History"></nrt-charts-line>
 	</section>
 
-
-	<h2>round gauge chart</h2>
 	<section id="nrt-charts-solid-gauge">
+		<h2>round gauge chart</h2>
 		<nrt-charts-solid-gauge data-chart-data="schoolRating" chart-title="School Rating"></nrt-charts-solid-gauge>
 	</section>
 </div>

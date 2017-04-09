@@ -12,6 +12,7 @@ and add nrt-charts module to your angular app
 ---
 
 ## Chart Types:
+#### see full list of charts at https://nrt-charts.herokuapp.com/Example/index.html
 
 1. **NRT-CHARTS-LINE**
 
@@ -24,8 +25,10 @@ and add nrt-charts module to your angular app
 2. **NRT-CHARTS-PIE**
 
 		<nrt-charts-pie chart-data="data" chart-title="title"></nrt-charts-pie>
-sample data:
-demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
+
+	sample data:
+
+	demo:https://nrt-charts.herokuapp.com/Example/index.html#nrt-charts-solid-gauge
 
 3. **NRT-CHARTS-DONUT**
 

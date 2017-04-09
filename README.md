@@ -12,7 +12,7 @@ and add nrt-charts module to your angular app
 ---
 
 ## Chart Types:
-#### see full list of charts at https://nrt-charts.herokuapp.com/Example/index.html
+#### see full list of charts at https://nrt-charts.herokuapp.com/Example/main.html
 
 1. **NRT-CHARTS-LINE**
 

@@ -1,0 +1,8 @@
+{
+	"name": "nrt-charts",
+	"description": "nrt charts library",
+	"version": "1.0.0",
+	"engines": {
+		"node": "5.9.0"
+	}
+}

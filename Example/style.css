@@ -15,8 +15,9 @@ h1 {
 h1 img {
 	width: 60px;
 }
-h1 span {
+h1 span{
 	position: absolute;
+
 }
 section {
 	padding: 10px;

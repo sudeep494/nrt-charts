@@ -68,8 +68,46 @@
 			};
 		}],
 
-		template: '<highchart id="solid-gauge" config="$ctrl.config"></highchart>'
-	});
+		template: '<highchart config="$ctrl.config"></highchart>'
+	})
+
+
+
+	.component('nrtChartsLine', {
+		bindings:{
+			chartData: '=',
+			chartTitle:'@'
+		},
+		controller: [
+			function () {
+				var vm = this;
+				vm.$onInit = function() {
+				vm.config= {
+					title:{text:vm.chartTitle},
+					 type:"line",
+					 plotOptions:{
+						 line:{lineWidth:5}
+
+					 },
+					xAxis: {
+							categories: ['2005','2006','2007','2008','2009','2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017']},
+
+					series: [{
+						name:"this home",
+							data: [250000,260000,200000,190000,180000,175000,185000,195000,200000,210000,220000,235000,245000]
+					},
+									{
+						name:"this zipcode",
+										dashStyle:"ShortDash",
+										color:"#ccc",
+							data: [270000,280000,220000,210000,200000,195000,205000,215000,220000,210000,240000,255000,265000]
+					}]
+				};
+			};
+		}],
+
+		template: '<highchart config="$ctrl.config"></highchart>'
+	})
 
 
 })();

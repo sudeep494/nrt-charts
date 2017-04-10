@@ -4,6 +4,7 @@
 	angular.module('nrt-charts', ['highcharts-ng'])
 
 
+
 	.component('nrtChartsLine', {
 		bindings:{
 			chartData: '=',
@@ -23,15 +24,17 @@
 					xAxis: {
 							categories: ['2005','2006','2007','2008','2009','2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017']},
 
-					series: [{
-						name:"this home",
-							data: [250000,260000,200000,190000,180000,175000,185000,195000,200000,210000,220000,235000,245000]
-					},
+					series: [
 									{
 						name:"this zipcode",
 										dashStyle:"ShortDash",
-										color:"#ccc",
+										color:'#5778a4',
 							data: [270000,280000,220000,210000,200000,195000,205000,215000,220000,210000,240000,255000,265000]
+					},
+					{
+						name:"this home",
+							color:'#30507b',
+							data: [250000,260000,200000,190000,180000,175000,185000,195000,200000,210000,220000,235000,245000]
 					}]
 				};
 			};
@@ -79,7 +82,8 @@
 							plotBands: [{ // visualize the weekend
 									from: 7,
 									to: 9,
-									color: 'rgba(68, 170, 213, .2)'
+									color: 'rgba(87, 120, 164, 0.8)',//'rgba(48, 80, 123, 0.8)',
+									zIndex:9
 							}]
 					},
 					yAxis: {
@@ -114,7 +118,9 @@
 							name: 'Edina',
 							data: [235860,
 									223800, 210040, 172870, 147470, 160760, 195550, 174098, 180090, 199500
-						]
+						],
+						color: '#30507b',
+						fillColor: '#30507b'//5778a4
 			 // }, {
 			 //       name: 'Nokomis Neighborhood',
 			 //       data: [374310, 391970, 400000, 401000, 380000, 390000, 370000, 350000, 330000, 310000]
@@ -150,14 +156,13 @@
 						},
 								plotOptions: {
 										bar: {
-												linecap: 'round',
-												rounded: 'true',
+												color: '#30507b',
 												dataLabels: {
 														enabled: true,
 														align: 'right',
 														distance: -50,
 														style: {
-																 color: (Highcharts.theme &&        Highcharts.theme.contrastTextColor) || 'black',
+																 color: 'white',//(Highcharts.theme &&        Highcharts.theme.contrastTextColor) || 'black',
 															//fontsize: '10px',
 															fontWeight: 'normal',
 															textOutline: '0px 0 px'
@@ -175,7 +180,7 @@
 						verticalAlign: 'top',
 						y: 15,
 						floating: true,
-						backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+						//backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
 						borderColor: '#CCC',
 						borderWidth: 1,
 						shadow: false,
@@ -185,7 +190,7 @@
 					},
 						 series: [{
 								type: 'bar',
-							 borderRadius: 8,
+							 borderRadius: 5,
 							 pointWidth: 20,
 							 showInLegend: false,
 			 //name: 'Age',
@@ -223,6 +228,8 @@
 				vm.config= {
 					chart: {
 						type: 'column'
+						//color:'#122647'
+						 //colors: ['#dce8f9','#a3bad8','#5778a4','#30507b','#122647']
 						 //colors: ['#dce8f9','#a3bad8','#5778a4','#30507b','#122647']
 						},
 						title: {
@@ -246,7 +253,9 @@
 										borderWidth: 0,
 										dataLabels: {
 												enabled: true
-										}
+										},
+										colors: ['#30507b','#30507b','#30507b','#30507b','#30507b'],
+										borderRadius:5
 								}
 						},
 
@@ -316,6 +325,84 @@
 			function () {
 				var vm = this;
 				vm.$onInit = function() {
+					Highcharts.getOptions().plotOptions.pie.colors = (function () {
+		var colors = [],
+				base = Highcharts.getOptions().colors[0],
+				i;
+
+		for (i = 0; i < 10; i += 1) {
+				// Start out with a darkened base color (negative brighten), and end
+				// up with a much brighter color
+				colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
+		}
+		return colors;
+}());
+					console.log(Highcharts);
+					Highcharts.theme = {
+	 //colors: Highcharts.getOptions().plotOptions.pie.colors,
+	 //['#7cb5ec', '#f7a35c', '#90ee7e', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
+		 // '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
+		//NRT Colors
+	colors: ['#30507b','#5778a4','#a3bad8','#dce8f9','#122647'],
+
+	 chart: {
+	//    backgroundColor: null,
+			style: {
+				 fontFamily: 'Dosis, sans-serif'
+			}
+	 },
+	 title: {
+			style: {
+				 fontSize: '16px',
+				 fontWeight: 'bold',
+				 textTransform: 'uppercase'
+			}
+	 },
+	 tooltip: {
+			borderWidth: 0,
+			backgroundColor: 'rgba(219,219,216,0.8)',
+			shadow: false
+	 },
+	 legend: {
+			itemStyle: {
+				 fontWeight: 'bold',
+				 fontSize: '13px'
+			}
+	 },
+	 xAxis: {
+			gridLineWidth: 1,
+			labels: {
+				 style: {
+						fontSize: '12px'
+				 }
+			}
+	 },
+	 yAxis: {
+			minorTickInterval: 'auto',
+			title: {
+				 style: {
+						textTransform: 'uppercase'
+				 }
+			},
+			labels: {
+				 style: {
+						fontSize: '12px'
+				 }
+			}
+	 },
+	 plotOptions: {
+			candlestick: {
+				 lineColor: '#404048'
+			}
+	 },
+
+
+	 // General
+	d2: '#F0F0EA'
+
+};
+Highcharts.setOptions(Highcharts.theme);
+
 				vm.config= {
 					chart: {
 							type: 'pie'
@@ -588,7 +675,7 @@
 					tooltip:{enabled:false},
 					series: [{
 							data: [{
-									color: Highcharts.getOptions().colors[0],
+									//color: Highcharts.getOptions().colors[4],
 									radius: '100%',
 									innerRadius: '70%',
 									y: vm.chartData.value,

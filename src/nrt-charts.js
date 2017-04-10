@@ -27,11 +27,13 @@
 						{
 							name:"this zipcode",
 							dashStyle:"ShortDash",
-							data: [270000,280000,220000,210000,200000,195000,205000,215000,220000,210000,240000,255000,265000]
+							data: [270000,280000,220000,210000,200000,195000,205000,215000,220000,210000,240000,255000,265000],
+							color:'#5778a4'
 						},
 						{
 							name:"this home",
-							data: [250000,260000,200000,190000,180000,175000,185000,195000,200000,210000,220000,235000,245000]
+							data: [250000,260000,200000,190000,180000,175000,185000,195000,200000,210000,220000,235000,245000],
+							color:'#30507b'
 						}
 					]
 				};
@@ -505,13 +507,17 @@ Highcharts.setOptions(Highcharts.theme);
 							text: 'Click the slices to view gender breakdown.'
 					},
 					plotOptions: {
-							series: {
-									dataLabels: {
-											enabled: true,
-											distance: -50,
-											format: '{point.y:.1f}% {point.name}: '
-
+						 pie: {
+							dataLabels: {
+									enabled: true,
+									distance: -50,
+									format: '{point.y:.1f}% <br> {point.name}',
+									style: {
+										color: 'white',
+										fontWeight: 'normal',
+										textOutline: '0px 0 px'
 									}
+								}
 							}
 					},
 					tooltip: {
@@ -541,6 +547,12 @@ Highcharts.setOptions(Highcharts.theme);
 							}]
 						}],
 							 drilldown: {
+								 activeDataLabelStyle: {
+						textDecoration: 'none',
+						fontStyle: 'normal',
+						color: 'white',
+						fontWeight: 'normal'
+				},
 							series: [{
 							 innerSize: '45%',
 									id: 'genderw',

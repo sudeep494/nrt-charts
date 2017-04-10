@@ -22,21 +22,21 @@ and add nrt-charts module to your angular app
 
 		{
 		 x: {
-				label:'years',
-				values: [2015, 2016, 2017]
-			},
-			y:[
-				{
-					label:'this home',
-					values:[220000, 230000, 240000],
-					style:'solid'
-				},
-				{
-					label:'this zipcode',
-					values:[230000, 240000, 250000],
-					style:'dashed'
-				}
-			]
+		  label:'years',
+		  values: [2015, 2016, 2017]
+		  },
+		  y:[
+		    {
+		      label:'this home',
+		      values:[220000, 230000, 240000],
+		      style:'solid'
+		    },
+		    {
+		      label:'this zipcode',
+		      values:[230000, 240000, 250000],
+		      style:'dashed'
+		    }
+		  ]
 		}
 
 	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-line

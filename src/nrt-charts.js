@@ -119,7 +119,7 @@
 			 //       name: 'Nokomis Neighborhood',
 			 //       data: [374310, 391970, 400000, 401000, 380000, 390000, 370000, 350000, 330000, 310000]
 					}]
-			}
+			};
 			};
 		}],
 
@@ -138,51 +138,51 @@
 				var vm = this;
 				vm.$onInit = function() {
 				vm.config= {
-						title:{text:'Age',
-									align: 'left',
-									x: 10},
-						xAxis: {
-								categories: ['0 - 9','10 - 19','20 - 29','30 - 39', '40 - 49','50 - 59','60 - 69','70 - 79','80+']},
-			yAxis: {
-				title: {
-						text: null
-					}
-				},
-						plotOptions: {
-								bar: {
-										linecap: 'round',
-										rounded: 'true',
-										dataLabels: {
-												enabled: true,
-												align: 'right',
-												distance: -50,
-												style: {
-														 color: (Highcharts.theme &&        Highcharts.theme.contrastTextColor) || 'black',
-													//fontsize: '10px',
-													fontWeight: 'normal',
-													textOutline: '0px 0 px'
-												}
-										},
-										//startAngle: -90,
-										//endAngle: 90,
-										//center: ['50%', '55%']
-								}
+					title:{text:'Age',
+								align: 'left',
+								x: 10},
+					xAxis: {
+							categories: ['0 - 9','10 - 19','20 - 29','30 - 39', '40 - 49','50 - 59','60 - 69','70 - 79','80+']},
+					yAxis: {
+						title: {
+								text: null
+							}
 						},
-				 legend: {
-				//reversed: true,
-				 align: 'left',
-				x: 10,
-				verticalAlign: 'top',
-				y: 15,
-				floating: true,
-				backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-				borderColor: '#CCC',
-				borderWidth: 1,
-				shadow: false,
-				itemStyle: {
-				fontWeight: 'normal'
-				}
-		},
+								plotOptions: {
+										bar: {
+												linecap: 'round',
+												rounded: 'true',
+												dataLabels: {
+														enabled: true,
+														align: 'right',
+														distance: -50,
+														style: {
+																 color: (Highcharts.theme &&        Highcharts.theme.contrastTextColor) || 'black',
+															//fontsize: '10px',
+															fontWeight: 'normal',
+															textOutline: '0px 0 px'
+														}
+												},
+												//startAngle: -90,
+												//endAngle: 90,
+												//center: ['50%', '55%']
+										}
+								},
+						 legend: {
+						//reversed: true,
+						 align: 'left',
+						x: 10,
+						verticalAlign: 'top',
+						y: 15,
+						floating: true,
+						backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+						borderColor: '#CCC',
+						borderWidth: 1,
+						shadow: false,
+						itemStyle: {
+						fontWeight: 'normal'
+						}
+					},
 						 series: [{
 								type: 'bar',
 							 borderRadius: 8,
@@ -200,14 +200,203 @@
 							 ['70 - 79', 1203],
 							 ['80+', 352],
 					]
-		}]
-	};
-};
+				}]
+			};
+		};
 		}],
 
 		template: '<highchart config="$ctrl.config"></highchart>'
 	})
 
+
+
+
+	.component('nrtChartsColumn', {
+		bindings:{
+			chartData: '=',
+			chartTitle:'@'
+		},
+		controller: [
+			function () {
+				var vm = this;
+				vm.$onInit = function() {
+				vm.config= {
+					chart: {
+						type: 'column'
+						 //colors: ['#dce8f9','#a3bad8','#5778a4','#30507b','#122647']
+						},
+						title: {
+								text: 'Ethnicity drilldown'
+						},
+						xAxis: {
+								type: 'category'
+						},
+						yAxis: {
+									title: {
+										text: 'Percentage'
+									}
+						},
+
+						legend: {
+								enabled: true
+						},
+
+						plotOptions: {
+								series: {
+										borderWidth: 0,
+										dataLabels: {
+												enabled: true
+										}
+								}
+						},
+
+						series: [{
+								name: 'Ehnicities',
+								colorByPoint: true,
+								data: [{
+										name: 'White',
+										y: 31.5,
+										drilldown: 'genderw'
+								}, {
+										name: 'Black',
+										y: 29.5,
+										drilldown: 'genderb'
+								}, {
+										name: 'Hispanic',
+										y: 24.6,
+										drilldown: 'genderh'
+								}, {
+										name: 'Asian',
+										y: 24.6,
+										drilldown: 'gendera'
+								}]
+						}],
+						drilldown: {
+								series: [{
+										id: 'genderw',
+										data: [
+										['Male',   75],
+										['Female',  25]
+										]
+								}, {
+										id: 'genderb',
+										data: [
+											 ['Male',   20],
+											 ['Female',  80]
+										]
+								}, {
+										id: 'genderh',
+										data: [
+									 ['Male',   61.5],
+										['Female',  38.5]
+									]
+							 }, {
+										id: 'gendera',
+										data: [
+									 ['Male',   61.5],
+										['Female',  38.5]
+									]
+								}]
+						}
+				};
+			};
+		}],
+
+		template: '<highchart config="$ctrl.config"></highchart>'
+	})
+
+
+
+	.component('nrtChartsPie', {
+		bindings:{
+			chartData: '=',
+			chartTitle:'@'
+		},
+		controller: [
+			function () {
+				var vm = this;
+				vm.$onInit = function() {
+				vm.config= {
+					chart: {
+							type: 'pie'
+					},
+					title: {
+							text: 'Minneapolis Ethnicity Drill down'
+					},
+					subtitle: {
+							text: 'Click the slices to view versions. Source: NRT LLC.'
+					},
+					plotOptions: {
+							series: {
+									dataLabels: {
+											enabled: true,
+											format: '{point.name}: {point.y:.1f}%'
+									}
+							}
+					},
+
+					tooltip: {
+							headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+							pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+					},
+					series: [{
+							name: 'Ethnicity',
+							colorByPoint: true,
+							data: [{
+									name: 'White',
+									y: 34.03,
+									drilldown: 'White'
+							}, {
+									name: 'Black',
+									y: 25.38,
+									drilldown: 'Black'
+							}, {
+									name: 'Hispanic',
+									y: 14.77,
+									drilldown: 'Hispanic'
+							}, {
+									name: 'Asian',
+									y: 10.91,
+									drilldown: 'Asian'
+							 }]
+					}],
+					drilldown: {
+							series: [{
+									name: 'White',
+									id: 'White',
+									data: [
+										 ['Male',   60],
+										 ['Female',  40]
+									]
+							}, {
+									name: 'Black',
+									id: 'Black',
+									data: [
+										 ['Male',   40],
+										 ['Female',  60]
+									]
+							}, {
+									name: 'Hispanic',
+									id: 'Hispanic',
+									data: [
+										 ['Male',   25],
+										 ['Female',  75]
+									]
+							}, {
+									name: 'Asian',
+									id: 'Asian',
+									data: [
+										 ['Male',   55],
+										 ['Female',  45]
+									]
+							}]
+					}
+			};
+		};
+		}],
+
+		template: '<highchart config="$ctrl.config"></highchart>'
+	})
 
 
 
@@ -277,7 +466,7 @@
 		}],
 
 		template: '<highchart config="$ctrl.config"></highchart>'
-	})
+	});
 
 
 })();

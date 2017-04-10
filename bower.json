@@ -1,27 +1,28 @@
 {
-	"name": "nrt-charts",
-	"description": "nrt charts library",
-	"main": "['./dist/nrt-charts.js','./dist/nrt-charts/css']",
-	"authors": [
-		"sudeep shrestha",
-		"michael gauer"
-	],
-	"license": "MIT",
-	"keywords": [
-		"nrt",
-		"charts",
-		"highcharts"
-	],
-	"homepage": "https://github.com/sudeep494/nrt-charts",
-	"moduleType": [],
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests"
-	],
-	"dependencies": {
-		"ng-highcharts": "*"
-	}
+  "name": "nrt-charts",
+  "description": "nrt charts library",
+  "main": "['./dist/nrt-charts.js','./dist/nrt-charts/css']",
+  "authors": [
+    "sudeep shrestha",
+    "michael gauer"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "nrt",
+    "charts",
+    "highcharts"
+  ],
+  "homepage": "https://github.com/sudeep494/nrt-charts",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-highcharts": "*",
+    "lodash": "~4.17.4"
+  }
 }

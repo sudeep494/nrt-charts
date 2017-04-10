@@ -116,6 +116,35 @@ and add nrt-charts module to your angular app
 
 	sample data:
 
+		{
+		 x: {
+		  label:'ethnicity',
+		  values: ['white', 'black', 'hispanic']
+		  },
+		  y:[
+		    {
+		      label:'percentage',
+		      values:[
+		        {
+		        value:70.5,
+		        drilldown:{
+		          title:'gender breakdown',
+		          x:{
+		            name:'gender',
+		            values:['Male','Female']
+		          },
+		          y:{
+		            name:'percentage',
+		            values:[55,45]
+							}
+		       },
+		      12.5,
+		      8
+		      ]
+		    }
+		  ]
+		}
+
 	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-pie
 
 6. **nrt-charts-donut**

@@ -19,6 +19,24 @@ and add nrt-charts module to your angular app
 		<nrt-charts-line chart-data="data" chart-title="title"></nrt-charts-line>
 
 	sample data:
+		{
+			x: {
+				label:'years',
+				values: [2015, 2016, 2017]
+			},
+			y:[
+				{
+					label:'this home',
+					values:[220000, 230000, 240000],
+					style:'solid'
+				},
+				{
+					label:'this zipcode',
+					values:[230000, 240000, 250000],
+					style:'dashed'
+				}
+			]
+		}
 
 	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-line
 
@@ -75,7 +93,7 @@ and add nrt-charts module to your angular app
 		<nrt-charts-round-gauge chart-data="data" chart-title="title"></nrt-round-gauge>
 
 	sample data:
-	
+
 		{
 		value:4,
 		min:0,

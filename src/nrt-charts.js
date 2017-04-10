@@ -400,6 +400,149 @@
 
 
 
+	.component('nrtChartsDonut', {
+		bindings:{
+			chartData: '=',
+			chartTitle:'@'
+		},
+		controller: [
+			function () {
+				var vm = this;
+				vm.$onInit = function() {
+				vm.config= {
+					chart: {
+							type: 'pie'
+					},
+					title: {
+							text: 'Minneapolis Ethnicity Breakdown'
+					},
+					subtitle: {
+							text: 'Click the slices to view gender breakdown.'
+					},
+					plotOptions: {
+							series: {
+									dataLabels: {
+											enabled: true,
+											distance: -50,
+											format: '{point.y:.1f}% {point.name}: '
+
+									}
+							}
+					},
+					tooltip: {
+							headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+							pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+					},
+					series: [{
+							name: 'Ethnicity',
+							colorByPoint: true,
+							innerSize: '45%',
+								 data: [{
+									name: 'White',
+									y: 21.5,
+									drilldown: 'genderw'
+							}, {
+									name: 'Black',
+									y: 19.5,
+									drilldown: 'genderb'
+							}, {
+									name: 'Hispanic',
+									y: 19.6,
+									drilldown: 'genderh'
+							}, {
+									name: 'Asian',
+									y: 10.6,
+									drilldown: 'gendera'
+							}]
+						}],
+							 drilldown: {
+							series: [{
+							 innerSize: '45%',
+									id: 'genderw',
+									data: [
+								['Male', 70],
+									['Female',  30]
+									]
+							}, {
+									id: 'genderb',
+									data: [
+										 ['Male',   20],
+										 ['Female',  80]
+									]
+							}, {
+									id: 'genderh',
+									data: [
+								 ['Male',   61.5],
+									['Female',  38.5]
+								]
+						 }, {
+									id: 'gendera',
+									data: [
+								 ['Male',   61.5],
+									['Female',  38.5]
+								]
+							}]
+					}
+			};
+			};
+		}],
+
+		template: '<highchart config="$ctrl.config"></highchart>'
+	})
+
+
+
+
+	.component('nrtChartsSemiDonut', {
+		bindings:{
+			chartData: '=',
+			chartTitle:'@'
+		},
+		controller: [
+			function () {
+				var vm = this;
+				vm.$onInit = function() {
+				vm.config= {
+					plotBackgroundColor: null,
+					plotBorderWidth: null,
+					plotShadow: false,
+					title:{text:'Gender Report'},
+									xAxis: {
+											categories: ['Male','Female']},
+
+									plotOptions: {
+											pie: {
+													dataLabels: {
+															enabled: true,
+															distance: -50,
+															style: {
+																	color: 'white',
+																	fontsize: '10px',
+																fontWeight: 'normal',
+																textOutline: '0px 0 px'
+															}
+													},
+													startAngle: -90,
+													endAngle: 90,
+													center: ['50%', '70%']
+											}
+									},
+									 series: [{
+							type: 'pie',
+							name: 'Gender Distribution',
+							innerSize: '50%',
+							data: [
+									['Male',   61.5],
+									['Female',  38.5]
+							]
+					}]
+				};
+			};
+		}],
+
+		template: '<highchart config="$ctrl.config"></highchart>'
+	})
+
 
 	.component('nrtChartsRoundGauge', {
 		bindings:{

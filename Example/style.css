@@ -59,7 +59,12 @@ section {
 box-shadow: 0px -1px 47px -5px rgba(0,0,0,0.75);
 }
 
-a{color:inherit!important;}
+.row{
+ margin-bottom:20px;
+}
+a{
+	color:inherit!important;
+}
 a:hover{
 	text-decoration:none!important;
 	font-weight: bold;

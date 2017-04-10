@@ -30,44 +30,49 @@
 			<a href="https://github.com/sudeep494/nrt-charts"><input type="button" class="btn btn-success btn-lg" value="learn more"></input></a>
 		</div>
 
-		<!-- <h1>
-			<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_256.png"></img>
-			<span>CHARTS</span>
-		</h1> -->
-<div class="container">
+		<div class="container">
 
-	<div class="row">
-		<div class="col-md-2 text-center">
-			<a href="#nrt-charts-line">line chart</a>
-		</div>
-		<div class="col-md-2 text-center">
-			<a href="#nrt-charts-line">pie chart</a>
-		</div>
-		<div class="col-md-2 text-center">
-			<a href="#nrt-charts-solid-gauge"><a href="#nrt-charts-solid-gauge">donut chart</a>
-		</div>
-		<div class="col-md-2 text-center">
-			<a href="#nrt-charts-solid-gauge">half donut chart</a>
-		</div>
-		<div class="col-md-2 text-center">
-			<a href="#nrt-charts-solid-gauge">round gauge chart</a>
-		</div>
-		<div class="col-md-2 text-center">
-			<a href="#nrt-charts-solid-gauge">line fill chart</a>
-		</div>
-	</div>
+			<div class="row">
+				<div class="col-md-3 text-center">
+					<a href="#nrt-charts-line">line chart</a>
+				</div>
+				<div class="col-md-3 text-center">
+					<a href="#nrt-charts-bar">bar chart</a>
+				</div>
+				<div class="col-md-3 text-center">
+					<a href="#nrt-charts-column">column chart</a>
+				</div>
+				<div class="col-md-3 text-center">
+					<a href="#nrt-charts-pie">pie chart</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 text-center">
+					<a href="#nrt-charts-donut">donut chart</a>
+				</div>
+				<div class="col-md-3 text-center">
+					<a href="#nrt-charts-semi-donut">semi donut chart</a>
+				</div>
+				<div class="col-md-3 text-center">
+					<a href="#nrt-charts-round-gauge">round gauge chart</a>
+				</div>
+				<div class="col-md-3 text-center">
+					<a href="#nrt-charts-area-spline">area spline chart</a>
+				</div>
+			</div>
+
+			<section id="nrt-charts-line">
+				<h2>line chart</h2>
+				<nrt-charts-line data-chart-data="homeValueHistory" chart-title="Home Value History"></nrt-charts-line>
+			</section>
+
+			<section id="nrt-charts-round-gauge">
+				<h2>round gauge chart</h2>
+				<nrt-charts-round-gauge data-chart-data="schoolRating" chart-title="School Rating"></nrt-charts-round-gauge>
+			</section>
 
 
-	<section id="nrt-charts-line">
-		<h2>line chart</h2>
-		<nrt-charts-line data-chart-data="homeValueHistory" chart-title="Home Value History"></nrt-charts-line>
-	</section>
-
-	<section id="nrt-charts-solid-gauge">
-		<h2>round gauge chart</h2>
-		<nrt-charts-solid-gauge data-chart-data="schoolRating" chart-title="School Rating"></nrt-charts-solid-gauge>
-	</section>
-</div>
+		</div>
 
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>

@@ -3,7 +3,7 @@
 ### easily pluggable to any angular app
 ---
 ## Installation:
-Simply install the module via bower
+Simply install the module via bower or clone/fork/download from github (future versions to support nuget, npm and jspm and angular2)
 
 		bower install nrt-charts
 
@@ -14,7 +14,7 @@ and add nrt-charts module to your angular app
 ## Chart Types:
 #### see full list of charts at https://nrt-charts.herokuapp.com/Example/main.html
 
-1. **NRT-CHARTS-LINE**
+1. **nrt-charts-line**
 
 		<nrt-charts-line chart-data="data" chart-title="title"></nrt-charts-line>
 
@@ -22,42 +22,58 @@ and add nrt-charts module to your angular app
 
 	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-line
 
-2. **NRT-CHARTS-PIE**
+2. **nrt-charts-area-spline**
+
+		<nrt-charts-area-spline chart-data="data" chart-title="title"></nrt-charts-area-spline>
+
+	sample data:
+
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-area-spline
+
+3. **nrt-charts-bar**
+
+		<nrt-charts-bar chart-data="data" chart-title="title"></nrt-charts-bar>
+
+	sample data:
+
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-bar
+
+4. **nrt-charts-column**
+
+		<nrt-charts-column chart-data="data" chart-title="title"></nrt-charts-column>
+
+	sample data:
+
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-column
+
+5. **nrt-charts-pie**
 
 		<nrt-charts-pie chart-data="data" chart-title="title"></nrt-charts-pie>
 
 	sample data:
 
-	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-solid-gauge
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-pie
 
-3. **NRT-CHARTS-DONUT**
+6. **nrt-charts-donut**
 
 		<nrt-charts-donut chart-data="data" chart-title="title"></nrt-charts-donut>
 
 	sample data:
 
-	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-solid-gauge
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-donut
 
-4. **NRT-CHARTS-HALF-DONUT**
+7. **nrt-charts-semi-donut**
 
-		<nrt-charts-half-donut chart-data="data" chart-title="title"></nrt-charts-semi donut>
-
-	sample data:
-
-	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-solid-gauge
-
-5. **NRT-CHARTS-ROUND-GAUGE**
-
-		<nrt-charts-solid-gauge chart-data="data" chart-title="title"></nrt-round-gauge>
+		<nrt-charts-semi-donut chart-data="data" chart-title="title"></nrt-charts-semi donut>
 
 	sample data:
 
-	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-solid-gauge
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-semi-donut
 
-6. **NRT-CHARTS-LINE-FILL**
+8. **nrt-charts-round-gauge**
 
-		<nrt-charts-line-fill chart-data="data" chart-title="title"></nrt-charts-line-fill>
+		<nrt-charts-round-gauge chart-data="data" chart-title="title"></nrt-round-gauge>
 
 	sample data:
 
-	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-solid-gauge
+	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-round-gauge

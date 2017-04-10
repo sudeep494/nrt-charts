@@ -47,24 +47,24 @@ and add nrt-charts module to your angular app
 
 	sample data:
 
-			{
-			 x: {
-			  label:'years',
-			  values: [2015, 2016, 2017]
-			  },
-			  y:[
-			    {
-			      label:'average home price',
-			      values:[220000, 230000, 240000]
-			    },
-			    {
-			      label:'Up 20%',
-			      plotBand:true
-			      min:2016,
-			      max:2017
-			    }
-			  ]
-			}
+		{
+		 x: {
+		  label:'years',
+		  values: [2015, 2016, 2017]
+		  },
+		  y:[
+		    {
+		      label:'average home price',
+		      values:[220000, 230000, 240000]
+		    },
+		    {
+		      label:'Up 20%',
+		      plotBand:true
+		      min:2016,
+		      max:2017
+		    }
+		  ]
+		}
 
 	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-area-spline
 
@@ -94,6 +94,19 @@ and add nrt-charts module to your angular app
 		<nrt-charts-column chart-data="data" chart-title="title"></nrt-charts-column>
 
 	sample data:
+
+		{
+		 x: {
+		  label:'ethnicity',
+		  values: ['white', 'black', 'hispanic']
+		  },
+		  y:[
+		    {
+		      label:'percentage',
+		      values:[70.5, 12.5, 8]
+		    }
+		  ]
+		}
 
 	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-column
 

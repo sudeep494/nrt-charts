@@ -196,9 +196,9 @@ and add nrt-charts module to your angular app
 	sample data:
 
 		{
-		value:4,
-		min:0,
-		max:5,
+		  value:4,
+		  min:0,
+		  max:5,
 		}
 
 	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-round-gauge

@@ -21,7 +21,7 @@ and add nrt-charts module to your angular app
 	sample data:
 
 		{
-			x: {
+	x: {
 				label:'years',
 				values: [2015, 2016, 2017]
 			},

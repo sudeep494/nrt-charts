@@ -136,7 +136,7 @@ and add nrt-charts module to your angular app
 		          y:{
 		            name:'percentage',
 		            values:[55,45]
-							}
+		          }
 		       },
 		      12.5,
 		      8
@@ -153,6 +153,19 @@ and add nrt-charts module to your angular app
 
 	sample data:
 
+		{
+		 x: {
+		  label:'ethnicity',
+		  values: ['white', 'black', 'hispanic']
+		  },
+		  y:[
+		    {
+		      label:'percentage',
+		      values:[70.5, 12.5, 8]
+		    }
+		  ]
+		}
+
 	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-donut
 
 7. **nrt-charts-semi-donut**
@@ -160,6 +173,19 @@ and add nrt-charts module to your angular app
 		<nrt-charts-semi-donut chart-data="data" chart-title="title"></nrt-charts-semi donut>
 
 	sample data:
+
+		{
+		 x: {
+		  label:'gender',
+		  values: ['male', 'female']
+		  },
+		  y:[
+		    {
+		      label:'percentage',
+		      values:[55, 45]
+		    }
+		  ]
+		}
 
 	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-semi-donut
 

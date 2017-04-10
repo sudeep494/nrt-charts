@@ -22,8 +22,8 @@ and add nrt-charts module to your angular app
 
 		{
 		x: {
-		label:'years',
-		values: [2015, 2016, 2017]
+			label:'years',
+		&nbsp;values: [2015, 2016, 2017]
 		},
 		y:[
 		{

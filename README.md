@@ -45,7 +45,7 @@ and add nrt-charts module to your angular app
 
 		<nrt-charts-area-spline chart-data="data" chart-title="title"></nrt-charts-area-spline>
 
-		sample data:
+	sample data:
 
 			{
 			 x: {
@@ -55,8 +55,7 @@ and add nrt-charts module to your angular app
 			  y:[
 			    {
 			      label:'average home price',
-			      values:[220000, 230000, 240000],
-			      style:'solid'
+			      values:[220000, 230000, 240000]
 			    },
 			    {
 			      label:'Up 20%',
@@ -74,6 +73,19 @@ and add nrt-charts module to your angular app
 		<nrt-charts-bar chart-data="data" chart-title="title"></nrt-charts-bar>
 
 	sample data:
+
+		{
+		 x: {
+		  label:'age range',
+		  values: ['0-9', '10-19', '20-29']
+		  },
+		  y:[
+		    {
+		      label:'population',
+		      values:[12000, 10000, 15000]
+		    }
+		  ]
+		}
 
 	demo:https://nrt-charts.herokuapp.com/Example/main.html#nrt-charts-bar
 

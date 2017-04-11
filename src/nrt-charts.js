@@ -20,6 +20,11 @@
 					 plotOptions:{
 						 line:{lineWidth:5}
 					 },
+					chart:{
+					 style: {
+							fontFamily: 'Dosis, sans-serif'
+					 }
+				 },
 					xAxis: {
 							categories: ['2005','2006','2007','2008','2009','2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017']},
 
@@ -58,12 +63,15 @@
 				vm.$onInit = function() {
 				vm.config= {
 					chart: {
-							type: 'areaspline'
+							type: 'areaspline',
+							style: {
+								 fontFamily: 'Dosis, sans-serif'
+							}
 					},
 					title: {
-							text: 'Avg Home Value',
-							align: 'left',
-							x: 10
+							text: 'Avg Home Value'//,
+							//align: 'left',
+							//x: 10
 					},
 				//  subtitle: {
 				//      text: 'Source: <a href="https://ColwellBankerHomes.com">' +
@@ -144,9 +152,13 @@
 				var vm = this;
 				vm.$onInit = function() {
 				vm.config= {
-					title:{text:'Age',
-								align: 'left',
-								x: 10},
+					title:{text:'Age'//,
+								//align: 'left',
+								//x: 10
+					},
+					chart:{style: {
+						 fontFamily: 'Dosis, sans-serif'
+					}},
 					xAxis: {
 							categories: ['0 - 9','10 - 19','20 - 29','30 - 39', '40 - 49','50 - 59','60 - 69','70 - 79','80+']},
 					yAxis: {
@@ -227,7 +239,10 @@
 				vm.$onInit = function() {
 				vm.config= {
 					chart: {
-						type: 'column'
+						type: 'column',
+						style: {
+							 fontFamily: 'Dosis, sans-serif'
+						}
 						//color:'#122647'
 						 //colors: ['#dce8f9','#a3bad8','#5778a4','#30507b','#122647']
 						 //colors: ['#dce8f9','#a3bad8','#5778a4','#30507b','#122647']
@@ -337,7 +352,6 @@
 		}
 		return colors;
 }());
-					console.log(Highcharts);
 					Highcharts.theme = {
 	 //colors: Highcharts.getOptions().plotOptions.pie.colors,
 	 //['#7cb5ec', '#f7a35c', '#90ee7e', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
@@ -352,11 +366,11 @@
 			}
 	 },
 	 title: {
-			style: {
-				 fontSize: '16px',
-				 fontWeight: 'bold',
-				 textTransform: 'uppercase'
-			}
+			// style: {
+			// 	 fontSize: '16px',
+			// 	 fontWeight: 'bold',
+			// 	 textTransform: 'uppercase'
+			// }
 	 },
 	 tooltip: {
 			borderWidth: 0,
@@ -498,7 +512,10 @@ Highcharts.setOptions(Highcharts.theme);
 				vm.$onInit = function() {
 				vm.config= {
 					chart: {
-							type: 'pie'
+							type: 'pie',
+							style: {
+								 fontFamily: 'Dosis, sans-serif'
+							}
 					},
 					title: {
 							text: 'Minneapolis Ethnicity Breakdown'

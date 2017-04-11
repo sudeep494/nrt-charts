@@ -73,6 +73,19 @@
 							//align: 'left',
 							//x: 10
 					},
+					legend: {
+						layout: 'vertical',
+						align: 'right',
+						verticalAlign: 'bottom',
+						x: -100,
+						y: -60,
+						floating: true,
+						borderWidth: 0,
+						//backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+						marker: {
+								symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+						}
+				},
 				//  subtitle: {
 				//      text: 'Source: <a href="https://ColwellBankerHomes.com">' +
 				//          'ColwellBankerHomes.com</a>'
@@ -90,8 +103,8 @@
 							plotBands: [{ // visualize the weekend
 									from: 7,
 									to: 9,
-									color: 'rgba(87, 120, 164, 0.8)',//'rgba(48, 80, 123, 0.8)',
-									zIndex:9
+									color: 'rgba(87, 120, 164, 0.7)',//'rgba(48, 80, 123, 0.8)',
+									zIndex:4
 							}]
 					},
 					yAxis: {
@@ -123,7 +136,7 @@
 							}
 					},
 					series: [{
-							name: 'Edina',
+							name: '^ 3.5%',
 							data: [235860,
 									223800, 210040, 172870, 147470, 160760, 195550, 174098, 180090, 199500
 						],
